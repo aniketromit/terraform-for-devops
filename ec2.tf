@@ -63,6 +63,7 @@ resource "aws_instance" "myterrainstance" {
     for_each = tomap({
         Aniket_ec2_from_tws_micro = "t3.micro"
         Aniket_ec2_from_tws_small = "t3.small"
+        Aniket_ec2_from_tws_large = "t3.small"
     })
 
     depends_on = [ aws_security_group.my_security_group,aws_key_pair.my_key ]
